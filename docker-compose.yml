@@ -1,0 +1,15 @@
+version: "2"
+
+services:
+  cgi-chat:
+    container_name: cgi-chat
+    build:
+      context: .
+
+    volumes:
+      - ./chat/public_html:/production/www/chat/public_html
+      - ./chat/cgi-bin:/production/www/chat/cgi-bin
+
+    ports:
+      - "80:80"
+    restart: always
