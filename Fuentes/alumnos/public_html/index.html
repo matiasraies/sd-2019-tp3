@@ -1,0 +1,31 @@
+<HTML>
+<HEAD>
+
+    <TITLE>Admin Alumnos</TITLE>
+
+    <script type="text/javascript">
+
+    function mySubmit(op)
+    {
+       
+        document.getElementById('operacion').value = op;
+      
+    }
+
+    </script>
+</HEAD>
+<BODY>
+    <CENTER>
+    <FORM method="GET" action="http://localhost/alumnos/cgi-bin/login.py">
+        <input type="hidden" id="operacion" name="operacion" value="">
+        <paragraph> <input type="submit" value="Nuevo Alumno" onclick="mySubmit('alta');" >
+        <paragraph> <input type="submit" value="Modificar Alumno" onclick="mySubmit('modif');" >
+        <paragraph> <input type="submit" value="Buscar Alumnos" onclick="mySubmit('listNombre');" >
+        <paragraph> <input type="submit" onsubmit value="Buscar Alumnos por Edad" onclick="mySubmit('listEdad');">
+    </FORM>
+    </CENTER>
+<HR>
+
+</form>
+</BODY>
+</HTML>

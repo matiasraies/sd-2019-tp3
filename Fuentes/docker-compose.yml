@@ -9,6 +9,8 @@ services:
     volumes:
       - ./chat/public_html:/production/www/chat/public_html
       - ./chat/cgi-bin:/production/www/chat/cgi-bin
+      - ./alumnos/public_html:/production/www/alumnos/public_html
+      - ./alumnos/cgi-bin:/production/www/alumnos/cgi-bin
 
     ports:
       - "80:80"

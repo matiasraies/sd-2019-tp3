@@ -1,0 +1,25 @@
+
+
+table,th,td
+{
+    border:2px solid black;
+}
+table
+{
+    border-collapse:collapse;
+    width:20%;
+}
+td
+{
+    height:40px;
+}
+tr:nth-child(3)
+{
+    background-color: burlywood;
+    color:white;
+}
+th
+{
+    background-color: orange;
+    color:black;
+}

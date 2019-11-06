@@ -27,7 +27,11 @@ RUN mkdir -p /production/www/alumnos/public_html
 
 COPY apache2 /etc/apache2
 RUN ln -s /etc/apache2/mods-available/cgi.load /etc/apache2/mods-enabled/cgi.load
-
+RUN apt-get -qq update && \
+    apt-get -qq install -y python3 && \
+    apt-get -qq clean && \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+    
 EXPOSE 80
 
 ENTRYPOINT [ "/usr/sbin/apache2" ]
